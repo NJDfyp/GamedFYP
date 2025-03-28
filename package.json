@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-native": "^0.76.8",
     "react-native-calendars": "^1.1307.0",
+    "react-native-dotenv": "^3.4.11",
     "react-native-gesture-handler": "^2.21.2",
     "react-native-progress": "^5.0.1",
     "react-native-reanimated": "^3.16.3",
