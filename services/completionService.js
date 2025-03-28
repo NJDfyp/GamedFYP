@@ -1,4 +1,3 @@
-
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Load daily/onetime completions stored under "gaming_completions"
@@ -25,7 +24,17 @@ export const saveCompletion = async (date, completedTasks) => {
     console.error('Error saving completion:', err);
   }
 };
-
+export const getCompletionByDate = async (date) => {
+  try {
+    const key = 'gaming_completions';
+    const raw = await AsyncStorage.getItem(key);
+    const all = raw ? JSON.parse(raw) : {};
+    return all[date] || [];
+  } catch (err) {
+    console.error('Error getting completion for date:', err);
+    return [];
+  }
+};
 // Helper: Generate a week key from a date string (format: "YYYY-W{weekNumber}")
 export const getWeekKey = (dateStr) => {
   const d = new Date(dateStr);

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { fetchGamingNews } from './newsService';
 // key should be put in .env but just for convenience since its a submission
-const API_KEY = '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';
+const API_KEY = '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';
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 
 const fetchGamingNewsChatbotResponse = async (userMessage) => {
