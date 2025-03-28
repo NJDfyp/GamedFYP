@@ -8,7 +8,7 @@ export const fetchGamingNews = async () => {
         language: 'en',
         sortBy: 'publishedAt',
         apiKey: '5d6a299908514e6eae7cc844dac2a7f7',
-      },
+      },// key should be put in .env but just for convenience since its a submission
     });
     return response.data.articles.map(article => ({
       title: article.title,

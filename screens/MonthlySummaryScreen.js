@@ -59,7 +59,7 @@ const MonthlySummaryScreen = () => {
       Object.keys(allTasks || {}).forEach(dateKey => {
         if (!dateKey.startsWith(monthKey)) return; // only consider tasks for target month
         (allTasks[dateKey] || []).forEach(task => {
-          if (!task.eventLabel || task.eventLabel.trim() === "") return; // skip if no group label
+          if (!task.eventLabel || task.eventLabel.trim() === "") return; 
           const group = task.eventLabel.trim();
           if (!groupedTasks[group]) {
             groupedTasks[group] = { daily: [], weekly: [], onetime: [] };

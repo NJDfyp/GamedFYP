@@ -69,7 +69,7 @@ const TaskSetupScreen = ({ navigation }) => {
     setNewTask('');
     setSelectedDate('');
     setTaskType('daily');
-    // Optionally clear selectedGroup if desired:
+    
     // setSelectedGroup('');
   };
 

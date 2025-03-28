@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { fetchGamingNews } from './newsService';
-
+// key should be put in .env but just for convenience since its a submission
 const API_KEY = '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';
 const API_URL = 'https://api.openai.com/v1/chat/completions';
 

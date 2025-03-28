@@ -24,7 +24,7 @@ const CalendarScreen = () => {
     }, [])
   );
 
-  // Example filtering logic (assuming it works as before)
+  
   const getTasksForDate = (date, tasksObj) => {
     if (!date || !tasksObj) return [];
     const today = new Date(date);

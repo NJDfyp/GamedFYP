@@ -16,14 +16,14 @@ const ChatbotScreen = () => {
     const userMessage = { role: 'user', content: userInput };
     setChatHistory((prevHistory) => [...prevHistory, userMessage]);
 
-    // Call your chatbot service
+    // Call chatbot service
     try {
       const botResponse = await fetchGamingNewsChatbotResponse(userInput);
       const botMessage = { role: 'bot', content: botResponse };
       setChatHistory((prevHistory) => [...prevHistory, botMessage]);
     } catch (error) {
       console.error("Error sending message:", error);
-      // Optionally add an error message to chat
+      
     }
 
     // Clear the input field
